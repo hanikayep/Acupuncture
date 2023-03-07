@@ -1,3 +1,19 @@
+h2{
+    font-size: clamp(2.5rem, 3vw, 3rem);
+}
+
+h3{
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+h4{
+    font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+.b-600{
+    font-weight: 600;
+}
+
 .border-bottom-primary{
     border-bottom: 20px solid $clr-primary;
 }
@@ -5,8 +21,8 @@
 
 .header{
     @include mediaQuery(){
-        h2{
-            visibility: hidden;
+        h3{
+            display: none;
         }
     }
 }
@@ -17,6 +33,7 @@
     height: 80vh;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     background-color: gray;
     background-blend-mode: multiply;
     text-align: center;
@@ -25,11 +42,11 @@
         width: 30%;
         margin: 2rem auto;
     }
-    h2{
-        font-size: clamp(2rem, 3vw, 3rem);
-    }
-    h3{
-        font-size: clamp(1.5rem, 2vw, 2rem);
+    @include mediaQuery(){
+        height: 90vh;
+        &__wrapper{
+            padding: 0 4rem;
+        }
     }
 }
 
@@ -52,10 +69,12 @@
 .about, .clinic{
     padding: 6rem 0;
     &__wrapper{
-        gap: 6rem;
+        gap: 2rem;
+        h2{
+            font-size: clamp(2.5rem, 3vw, 2.5rem);
+        }
         @include mediaQuery(){
             display: block !important;
-
             img{
                 width: 100%;
                 margin-bottom: 1rem;
@@ -66,9 +85,6 @@
 
 .bookNow{
     padding: 3rem 0;
-    h2{
-        font-size: clamp(1.5rem, 3vw, 2rem);
-    }
 }
 
 .testimonials{
@@ -131,7 +147,7 @@
             }
         }
         .contact__details{
-            padding: 0 2rem;
+            padding: 0 3rem;
         }
         }
 
@@ -160,7 +176,10 @@
             display: block;
             padding: 0;
             border-left: none;
+            a:hover{
+                color: $clr-gray;
             }
+        }
         }
         .footer__wrapper small{
             text-align: left;
