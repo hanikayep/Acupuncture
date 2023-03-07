@@ -150,14 +150,23 @@ h4 {
   padding: 6rem 0;
 }
 .contact__wrapper {
-  gap: 6rem;
+  gap: 3rem;
 }
 .contact__map {
-  width: 80%;
+  width: 77%;
 }
 .contact__map iframe {
   height: 100%;
   width: 100%;
+}
+.contact__details {
+  width: 33%;
+}
+.contact__details h2 {
+  font-size: clamp(2.5rem, 3vw, 2.5rem);
+}
+.contact__details p {
+  font-size: 1.1rem;
 }
 .contact hr {
   margin: 1rem 0;
@@ -176,6 +185,7 @@ h4 {
     width: 100%;
   }
   .contact__wrapper .contact__details {
+    width: auto;
     padding: 0 3rem;
   }
 }
@@ -190,6 +200,7 @@ h4 {
   display: inline-block;
   padding: 0 1rem;
   border-left: 1px solid #f2f2f2;
+  font-weight: 500;
 }
 .footer .nav ul li:first-child {
   border-left: none;
@@ -205,6 +216,8 @@ h4 {
   }
   .footer .nav ul li a:hover {
     color: #3d4045;
+    margin-left: 5px;
+    transition: 0.3s ease-in-out;
   }
   .footer .footer__wrapper {
     text-align: left !important;
