@@ -2,6 +2,16 @@
     border-bottom: 20px solid $clr-primary;
 }
 
+
+.header{
+    @include mediaQuery(){
+        h2{
+            visibility: hidden;
+        }
+    }
+}
+
+
 .banner{
     background-image: url('/img/banner.jpg');
     height: 80vh;
@@ -29,7 +39,12 @@
     &__wrapper{
         @include grid(3, 2rem);
         @include mediaQuery(){
-            @include grid (1, 2rem);
+            @include grid (1, 3rem);
+            margin-top: 3rem;
+            p{
+                width: 60%;
+                margin: 0 auto;        
+            }
         }
     }
 }
@@ -38,6 +53,14 @@
     padding: 6rem 0;
     &__wrapper{
         gap: 6rem;
+        @include mediaQuery(){
+            display: block !important;
+
+            img{
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+        }
     }
 }
 
@@ -95,6 +118,24 @@
         margin: 1rem 0;
         border: 1px solid $clr-primary;
     }
+
+    @include mediaQuery(){
+        &__wrapper{
+        flex-direction: column;
+        .contact__map{
+            order: 2;
+            width: 100%;
+            iframe{
+                height: 50vh;
+                width: 100%;
+            }
+        }
+        .contact__details{
+            padding: 0 2rem;
+        }
+        }
+
+    }
 }
 
 
@@ -102,13 +143,27 @@
     padding: 3rem 0;
     .nav{
         text-align: center;
+        ul li{
+            display: inline-block;
+            padding: 0 1rem;
+            border-left: 1px solid $clr-white;
+        }
+        ul li:first-child{
+            border-left: none;
+        }
     }
-    .nav ul li{
-        display: inline-block;
-        padding: 0 1rem;
-        border-left: 1px solid $clr-white;
-    }
-    .nav ul li:first-child{
-        border-left: none;
+
+    @include mediaQuery(){
+        .nav{
+            text-align: left;
+            ul li{
+            display: block;
+            padding: 0;
+            border-left: none;
+            }
+        }
+        .footer__wrapper small{
+            text-align: left;
+        }
     }
 }

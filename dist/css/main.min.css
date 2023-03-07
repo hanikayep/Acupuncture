@@ -25,6 +25,12 @@ a {
   border-bottom: 20px solid #e85d64;
 }
 
+@media screen and (max-width: 48rem) {
+  .header h2 {
+    visibility: hidden;
+  }
+}
+
 .banner {
   background-image: url("/img/banner.jpg");
   height: 80vh;
@@ -59,7 +65,12 @@ a {
   .services__wrapper {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 2rem;
+    grid-gap: 3rem;
+    margin-top: 3rem;
+  }
+  .services__wrapper p {
+    width: 60%;
+    margin: 0 auto;
   }
 }
 
@@ -68,6 +79,15 @@ a {
 }
 .about__wrapper, .clinic__wrapper {
   gap: 6rem;
+}
+@media screen and (max-width: 48rem) {
+  .about__wrapper, .clinic__wrapper {
+    display: block !important;
+  }
+  .about__wrapper img, .clinic__wrapper img {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 }
 
 .bookNow {
@@ -121,6 +141,22 @@ a {
   margin: 1rem 0;
   border: 1px solid #e85d64;
 }
+@media screen and (max-width: 48rem) {
+  .contact__wrapper {
+    flex-direction: column;
+  }
+  .contact__wrapper .contact__map {
+    order: 2;
+    width: 100%;
+  }
+  .contact__wrapper .contact__map iframe {
+    height: 50vh;
+    width: 100%;
+  }
+  .contact__wrapper .contact__details {
+    padding: 0 2rem;
+  }
+}
 
 .footer {
   padding: 3rem 0;
@@ -135,6 +171,19 @@ a {
 }
 .footer .nav ul li:first-child {
   border-left: none;
+}
+@media screen and (max-width: 48rem) {
+  .footer .nav {
+    text-align: left;
+  }
+  .footer .nav ul li {
+    display: block;
+    padding: 0;
+    border-left: none;
+  }
+  .footer .footer__wrapper small {
+    text-align: left;
+  }
 }
 
 .bg--primary {
